@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+  <title>Aurora</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<section id="header">
+    <a href="#"><img src="img.png"  style="width: 150px; height: auto;" class="Logo"></a>
+  <div>
+    <ul id="navbar">
+      <li><a href="index.html">Trang chủ</a></li>
+      <li><a href="shop.html">Sản phẩm</a></li>
+      <li><a class="active" href="danhmuc.html">Danh mục hàng</a></li>
+      <li><a href="sale.html">Khuyến mãi</a></li> 
+      <li id="lg-bag"><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+      <li id="lg-use"><a href="profile.html"><i class="fa-solid fa-user"></i></a></li>
+    </ul>
+  </div> 
+  <div id="mobile">
+    <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+    <i id="bar" class="fa-solid fa-outdent"></i>
+
+  </div> 
+  </section>    
+ <!-- Cart page -->
+  <section id="cart" class="section-p1"> 
+    <table width="100%">
+        <thead>
+            <tr>
+                <td> </td>
+                 <td> HÌNH ẢNH </td>
+                 <td> SẢN PHẨM </td>
+                 <td> GIÁ BÁN </td>
+                 <td> SỐ LƯỢNG </td>
+                 <td> TỔNG THU </td>
+            </tr>
+        </thead>
+            <tbody id="cart-body"></tbody>
+    </table>
+
+  </section>
+<!--  Cart Add -->
+  <section id="cart-add" class="section-p1"> 
+    <div id="coupon">
+        <h3>Áp Dụng Phiếu Giảm Giá </h3>
+        <div> 
+            <input type="text" id="coupon-input" placeholder="Nhập phiếu giảm giá">
+<button class="normal" onclick="applyCoupon()">Áp dụng</button>
+        </div>
+        </div>
+        <div id="subtotal">
+            <h3>Tổng giỏ hàng </h3>
+        <table>
+            <table>
+    <tr id="subtotal-row">
+        <td>Tổng thu</td>
+        <td>0đ</td>
+    </tr>
+
+    <tr>
+        <td>Phí Chuyển Hàng</td>
+        <td>Miễn Phí</td>
+    </tr>
+
+    <tr id="discount-row">
+        <td>Giảm giá</td>
+        <td>0đ</td>
+    </tr>
+
+    <tr id="final-total-row">
+        <td><strong>Tổng</strong></td>
+        <td><strong>0đ</strong></td>
+    </tr>
+</table>
+        </table>
+        <div class="payment-method">
+    <h4>Phương thức thanh toán</h4>
+
+    <select id="paymentMethod">
+        <option value="COD">Thanh toán khi nhận hàng (COD)</option>
+        <option value="MoMo">Ví MoMo</option>
+        <option value="VNPay">VNPay</option>
+        <option value="Banking">Chuyển khoản ngân hàng</option>
+    </select>
+</div>
+       <button onclick="goToCheckout()">
+    Tiến hành thanh toán
+</button>
+</button>
+    </div>
+  </section>
+
+
+<!-- New letter -->
+<section id="newsletter" class="section-p1 section-m1">
+    <div class="newstext">
+        <h4>Đăng ký nhận thông tin</h4>
+        <p>Nhận thông tin cập nhật qua Email về cửa hàng nới nhất của chúng tôi và <span> các ưu đãi đặc biệt</span> </p>
+    </div>
+    <div class="form">
+        <input type="text" placeholder="Nhập email của bạn">
+         <button onclick="window.location.href='thongtin.html'">
+  Đăng ký
+</button>
+    </div>
+    </section>
+    <!-- Footer -->
+     <footer class="section-p1">
+    <div class="col"> 
+      <img class="logo" src="img.png" alt="">
+      <h4>Thông tin liên hệ </h4>
+      <p><strong>Địa chỉ: </strong> Thanh Xuân, Hà Nội</p>
+      <p><strong>Điện thoại: </strong> 032 123 4567</p>
+      <p><strong>Mở cửa: </strong> 9:00 - 21:00,Thứ 2-Thứ 7</p>
+      <div class="follow">
+        <h4>Theo dõi chúng tôi </h4>
+        <div class="icon">
+          <i class="fa-brands fa-facebook-f"></i>
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa-brands fa-tiktok"></i>
+        </div>
+      </div>
+    </div>
+      <div class="col">
+        <h4>Liên hệ </h4>
+        <a href="#">Về chúng tôi</a>
+        <a href="#">Thông tin giao hàng</a>
+        <a href="#">Chính sách bảo mật</a>
+        <a href="#">Liên hệ chúng tôi</a>
+      </div>
+      <div class="col">
+        <h4>Tài khoản </h4>
+        <a href="#">Đăng nhập</a>
+        <a href="#">Xem giỏ hàng</a>
+        <a href="#">Sản phẩm yêu thích</a>
+        <a href="#">Theo dõi đơn hàng</a>
+      </div>
+      <div class="col install">
+        <h4>Tải ứng dụng </h4>
+        <p>Từ App Store hoặc Google Play</p>
+        <div class="row">
+          <img src="app.jpg" alt="">
+          <img src="play.jpg" alt="">
+        </div>
+        <p>Cổng thanh toán</p>
+        <img src="pay.png" alt="">
+      </div>
+      <div class="copyright">
+        <p>&copy; 2026 Aurora. All rights reserved.</p>
+      </div>
+      </footer>
+ <script>
+// ================= FORMAT =================
+function formatMoney(n){
+  return Number(n).toLocaleString('vi-VN') + "đ";
+}
+
+// ================= LOAD CART =================
+function loadCart(){
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  let tbody = document.getElementById("cart-body");
+  let totalCart = 0;
+
+  tbody.innerHTML = "";
+
+  if(cart.length === 0){
+    tbody.innerHTML = "<tr><td colspan='6'>Giỏ hàng trống</td></tr>";
+    updateTotal(0);
+    return;
+  }
+
+  cart.forEach((item, index)=>{
+    let price = Number(item.price);
+    let qty = Number(item.qty);
+    let total = price * qty;
+
+    totalCart += total;
+
+    tbody.innerHTML += `
+      <tr>
+        <td><a href="#" onclick="removeItem(${index})">x</a></td>
+        <td><img src="${item.img}" width="70"></td>
+        <td>${item.name}</td>
+        <td>${formatMoney(price)}</td>
+        <td>
+          <input type="number" value="${qty}" min="1"
+          onchange="changeQty(${index}, this.value)">
+        </td>
+        <td>${formatMoney(total)}</td>
+      </tr>
+    `;
+  });
+
+  updateTotal(totalCart);
+}
+
+// ================= UPDATE TOTAL =================
+function updateTotal(total){
+
+  let voucherCode = localStorage.getItem("voucherCode") || "";
+  let voucherPercent = Number(localStorage.getItem("voucherPercent")) || 0;
+
+  if(voucherCode){
+    document.getElementById("coupon-input").value = voucherCode;
+  }
+
+  let discount = total * voucherPercent / 100;
+  let finalTotal = total - discount;
+
+  document.querySelector("#subtotal-row td:last-child")
+    .innerText = formatMoney(total);
+
+  document.querySelector("#discount-row td:last-child")
+    .innerText = "-" + formatMoney(discount);
+
+  document.querySelector("#final-total-row td:last-child")
+    .innerHTML = "<strong>" + formatMoney(finalTotal) + "</strong>";
+}
+
+// ================= REMOVE ITEM =================
+function removeItem(index){
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  cart.splice(index,1);
+  localStorage.setItem("cart", JSON.stringify(cart));
+  loadCart();
+}
+
+// ================= CHANGE QTY =================
+function changeQty(index, qty){
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  cart[index].qty = Number(qty);
+  localStorage.setItem("cart", JSON.stringify(cart));
+  loadCart();
+}
+
+// ================= COUPON =================
+function applyCoupon(){
+  let code = document.getElementById("coupon-input")
+    .value.trim().toUpperCase();
+
+  let percent = 0;
+
+  if(code === "SALE70") percent = 70;
+  else if(code === "SALE50") percent = 50;
+  else if(code === "SALE30") percent = 30;
+  else if(code === "SALE20") percent = 20;
+  else{
+    alert("Mã giảm giá không hợp lệ!");
+    return;
+  }
+
+  localStorage.setItem("voucherCode", code);
+  localStorage.setItem("voucherPercent", percent);
+
+  loadCart();
+}
+
+// ================= CHECKOUT =================
+function goToCheckout(){
+
+  // 🔐 kiểm tra đăng nhập
+  let isLogin = localStorage.getItem("isLogin");
+
+  if(isLogin !== "true"){
+    alert("Bạn cần đăng nhập trước!");
+
+    // lưu trang cần quay lại
+    localStorage.setItem("redirectAfterLogin", "dathang.html");
+
+    window.location.href = "thongtin.html";
+    return;
+  }
+
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+  if(cart.length === 0){
+    alert("Giỏ hàng trống!");
+    return;
+  }
+
+  let total = 0;
+
+  cart.forEach(item=>{
+    total += Number(item.price) * Number(item.qty);
+  });
+
+  let voucherPercent =
+    Number(localStorage.getItem("voucherPercent")) || 0;
+
+  let finalTotal =
+    total - (total * voucherPercent / 100);
+
+  let paymentMethod =
+    document.getElementById("paymentMethod").value;
+
+  localStorage.setItem("paymentMethod", paymentMethod);
+  localStorage.setItem("invoice", JSON.stringify(cart));
+  localStorage.setItem("checkoutTotal", finalTotal);
+
+  window.location.href = "dathang.html";
+}
+
+// ================= INIT =================
+window.addEventListener("storage", loadCart);
+loadCart();
+
+</script>
+
+<script src="script.js"></script>
+</body>
+</html>
